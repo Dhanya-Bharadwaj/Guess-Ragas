@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { curated } from '../data/ragas';
+import janyaMeta from '../data/janya_meta.json';
 
 export default function LearnRagas() {
   // produce sorted lists (lexicographical by name) and remove numeric prefixes for melakarta
@@ -10,7 +11,11 @@ export default function LearnRagas() {
   const nameFixes = {
     'Dheerasankarabharanam': 'Dheera Shankarabharanam'
   };
-  const janyaSorted = [...curated.janya].sort((a, b) => a.localeCompare(b));
+  // Prefer authoritative janya list from `janya_meta.json`; fall back to curated list
+  const janyaList = janyaMeta && Object.keys(janyaMeta).length > 0
+    ? Object.keys(janyaMeta)
+    : curated.janya || [];
+  const janyaSorted = [...janyaList].sort((a, b) => a.localeCompare(b));
 
   return (
     <div className="learn-page">

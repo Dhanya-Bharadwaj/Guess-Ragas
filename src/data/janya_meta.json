@@ -1,0 +1,1170 @@
+{
+  "Abheri": {
+    "arohana": "S G2 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Amrutavarshini": {
+    "arohana": "S G3 M2 D3 N3 S",
+    "avarohana": "S N3 D3 M2 G3 S",
+    "parent": "Chitrambari",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Anandabhairavi": {
+    "arohana": "S G2 R2 G2 M1 P D2 P S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Anandabhairavi (light)": {
+    "arohana": "S G2 R2 G2 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Andolika": {
+    "arohana": "S G3 M1 D2 N2 S",
+    "avarohana": "S N2 D2 M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Arabhi": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N3 D2 P M1 R2 S",
+    "parent": "Dheerasankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Asaveri": {
+    "arohana": "S R1 M1 P D1 S",
+    "avarohana": "S N2 D1 P M1 G2 R1 S",
+    "parent": "Hanumatodi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Atana": {
+    "arohana": "S R3 M1 P N3 S",
+    "avarohana": "S N3 D2 P M1 G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bageshri": {
+    "arohana": "S G2 M1 D2 N2 S",
+    "avarohana": "N2 D2 M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bahudari": {
+    "arohana": "S G3 M1 P N3 S",
+    "avarohana": "S N3 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bhairavi": {
+    "arohana": "S R2 G2 M1 P D2 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R2 S",
+    "parent": "Hanumatodi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bilahari": {
+    "arohana": "S R2 G3 P D2 S",
+    "avarohana": "S N3 D2 P M1 G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bindumalini": {
+    "arohana": "S G3 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 R1 S",
+    "parent": "Chakravakam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bowli": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N3 D2 P M1 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Brindavana Saranga": {
+    "arohana": "S R2 M1 P N3 S",
+    "avarohana": "S N2 P M1 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chenchurutti": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chakravakam (Janya)": {
+    "arohana": "S G3 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandrajyoti": {
+    "arohana": "S R2 M1 D2 S",
+    "avarohana": "S D2 M1 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chayanata": {
+    "arohana": "S R2 G3 M1 P D2 N3 S",
+    "avarohana": "N3 D2 P M1 G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chaturangini": {
+    "arohana": "S R2 G3 M1 D2 N3 S",
+    "avarohana": "S N3 D2 M1 G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Desh": {
+    "arohana": "S R2 M1 P N3 S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Devaranji": {
+    "arohana": "S R2 G3 M1 P D2 S",
+    "avarohana": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Devamanohari": {
+    "arohana": "S R2 M1 P D1 S",
+    "avarohana": "S N2 D1 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Durbari Kanada": {
+    "arohana": "S R2 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Dwijavanti": {
+    "arohana": "S G2 R2 M1 P N2 S",
+    "avarohana": "S N2 D2 M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Ghanta": {
+    "arohana": "S R1 M1 D1 N3 S",
+    "avarohana": "S N3 D1 M1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Gowla": {
+    "arohana": "S R1 M1 P N3 S",
+    "avarohana": "S N3 P M1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Gowrimanohari (Janya)": {
+    "arohana": "S R2 G3 M1 P D2 N2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Hamsadhwani": {
+    "arohana": "S R2 G3 P N3 S",
+    "avarohana": "S N3 P G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Hamsanadam": {
+    "arohana": "S R2 M1 D2 N2 S",
+    "avarohana": "S N2 D2 M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Hamsanandi": {
+    "arohana": "S G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 S",
+    "parent": "Gamanashrama",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Hindolam": {
+    "arohana": "S G2 M1 D1 N2 S",
+    "avarohana": "S N2 D1 M1 G2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Janaranjani": {
+    "arohana": "S R2 M1 P D2 N2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Jayanthasri": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Jinjoti": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Jonpuri": {
+    "arohana": "S R2 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kadanakuthuhalam": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kalyani (Janya)": {
+    "arohana": "S R2 G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 R2 S",
+    "parent": "Mechakalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kambhoji": {
+    "arohana": "S R2 G3 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kannada": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kapi": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Karnaranjani": {
+    "arohana": "S R2 G3 M1 D2 S",
+    "avarohana": "S D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kedaragowla": {
+    "arohana": "S M1 G3 M1 P N2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kedaram": {
+    "arohana": "S M1 G3 M1 P N3 S",
+    "avarohana": "S N3 D2 P M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Keeravani (Janya)": {
+    "arohana": "S R2 G2 M1 P D1 N3 S",
+    "avarohana": "S N3 D1 P M1 G2 R2 S",
+    "parent": "Kiravani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Khamas": {
+    "arohana": "S R2 M1 P D2 N2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kiravani Desh": {
+    "arohana": "S R2 G2 M1 P D1 N3 S",
+    "avarohanam": "S N3 D1 P M1 G2 R2 S",
+    "parent": "Kiravani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kokilavarali": {
+    "arohana": "S R1 M1 D1 N3 S",
+    "avarohanam": "S N3 D1 M1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kuntalavarali": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kurunji": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Lalitha": {
+    "arohana": "S R1 G1 M2 D1 N3 S",
+    "avarohanam": "S N3 D1 M2 G1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Latangi Janya": {
+    "arohana": "S R2 G3 M2 P D2 S",
+    "avarohanam": "S D2 P M2 G3 R2 S",
+    "parent": "Latangi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Madhyamavati": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Madhukauns": {
+    "arohana": "S G2 M1 D1 N2 S",
+    "avarohanam": "S N2 D1 M1 G2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Malahari": {
+    "arohana": "S R1 M1 P D1 S",
+    "avarohanam": "S D1 P M1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Malavi": {
+    "arohana": "S R2 G3 M1 P D2 N3 S",
+    "avarohanam": "S N3 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Manirangu": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Manohari": {
+    "arohana": "S R2 G3 M1 D2 N2 S",
+    "avarohanam": "S N2 D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Mohana": {
+    "arohana": "S R2 G3 P D2 S",
+    "avarohanam": "S D2 P G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Mohanakalyani": {
+    "arohana": "S R2 G3 M2 P D2 S",
+    "avarohanam": "S N3 D2 P M2 G3 R2 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Mukari": {
+    "arohana": "S R1 G2 M1 P D1 N2 S",
+    "avarohanam": "S N2 D1 P M1 G2 S",
+    "parent": "Hanumatodi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Nadanamakriya": {
+    "arohana": "S R1 G3 M1 P D1 N3 S",
+    "avarohanam": "S N3 D1 P M1 G3 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Nadanamakriya (light)": {
+    "arohana": "S R1 M1 P N3 S",
+    "avarohanam": "S N3 P M1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Naati": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Navarasakannada": {
+    "arohana": "S R2 G3 M1 P D2 S",
+    "avarohanam": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Neelambari": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Nilamani": {
+    "arohana": "S G3 M2 P N3 S",
+    "avarohanam": "S N3 P M2 G3 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Niroshta": {
+    "arohana": "S G3 M1 D2 N3 S",
+    "avarohanam": "S N3 D2 M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Pahadi": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Phalamanjari": {
+    "arohana": "S G3 M1 P D2 S",
+    "avarohanam": "S D2 P M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Poornachandrika": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohanam": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Poornashadjam": {
+    "arohana": "S R1 M1 P D1 S",
+    "avarohanam": "S D1 P M1 R1 S",
+    "parent": "Hanumatodi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Poorvi Kalyani": {
+    "arohana": "S R2 G3 M2 P D2 S",
+    "avarohanam": "S N3 D2 P M2 G3 R2 S",
+    "parent": "Mechakalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Pushpalatika": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Rageshri": {
+    "arohana": "S G2 M1 D2 N2 S",
+    "avarohanam": "S N2 D2 M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Raghupriya Janya": {
+    "arohana": "S R1 G1 M2 D3 N3 S",
+    "avarohanam": "S N3 D3 M2 G1 R1 S",
+    "parent": "Raghupriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Ranjani": {
+    "arohana": "S R2 G3 M2 D2 N3 S",
+    "avarohanam": "S N3 D2 M2 G3 S",
+    "parent": "Latangi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Rasikaranjani": {
+    "arohana": "S R2 G3 M1 D2 N2 S",
+    "avarohanam": "S N2 D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Revagupti": {
+    "arohana": "S G2 M1 D1 N3 S",
+    "avarohanam": "S N3 D1 M1 G2 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Revanth": {
+    "arohana": "S R2 M1 P N3 S",
+    "avarohanam": "S N3 P M1 R2 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sahana": {
+    "arohana": "S R2 G3 M1 P M1 D2 N2 S",
+    "avarohanam": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Saindhavi": {
+    "arohana": "S G3 M1 P N2 S",
+    "avarohanam": "S N2 D2 P M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sama": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Saraswati": {
+    "arohana": "S R2 G3 M1 P D2 S",
+    "avarohanam": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Saramati": {
+    "arohana": "S R2 G2 M1 D1 N2 S",
+    "avarohanam": "S N2 D1 M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Saranga": {
+    "arohana": "S R2 M1 P N3 S",
+    "avarohanam": "S N3 D2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Saveri": {
+    "arohana": "S R1 M1 P D1 S",
+    "avarohanam": "S N2 D1 P M1 G2 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sindhubhairavi": {
+    "arohana": "S R2 G2 M1 P D2 N2 S",
+    "avarohanam": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sivaranjani": {
+    "arohana": "S R2 G2 M1 D1 S",
+    "avarohanam": "S D1 M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sowrashtram": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohanam": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sudda Dhanyasi": {
+    "arohana": "S G2 M1 D2 N2 S",
+    "avarohanam": "S N2 D2 M1 G2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sudha Saveri": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohanam": "S D2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Sunadavinodini": {
+    "arohana": "S R2 G3 M2 D2 N3 S",
+    "avarohanam": "S N3 D2 M2 G3 R2 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Surasena": {
+    "arohana": "S R2 G3 M1 D2 N2 S",
+    "avarohanam": "S N2 D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "SuruTTi": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohanam": "S N2 P M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Tilang": {
+    "arohana": "S G3 M1 P N3 S",
+    "avarohanam": "S N3 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Udayaravichandrika": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Urmika": {
+    "arohana": "S R2 G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 R2 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Vachaspatyam": {
+    "arohana": "S R2 G3 M2 P D2 S",
+    "avarohana": "S D2 P M2 G3 R2 S",
+    "parent": "Vachaspati",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Vagadeeswari (Janya)": {
+    "arohana": "S R1 G3 M1 P D2 N3 S",
+    "avarohana": "S N3 D2 P M1 G3 R1 S",
+    "parent": "Vagadheeswari",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Varali (Janya)": {
+    "arohana": "S G1 M1 P N3 S",
+    "avarohana": "S N3 D1 P M1 G1 S",
+    "parent": "Varali",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Veeravasantham": {
+    "arohana": "S R2 G3 M1 D2 S",
+    "avarohana": "S D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Vijayanagari": {
+    "arohana": "S G3 M1 D2 N2 S",
+    "avarohana": "S N2 D2 M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Vishwambhari (Janya)": {
+    "arohana": "S R1 G3 M2 D3 N3 S",
+    "avarohana": "S N3 D3 M2 G3 R1 S",
+    "parent": "Vishwambari",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Yadukula Kambhoji": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Yaman Kalyan": {
+    "arohana": "S R2 G3 M2 P D2 N3 S",
+    "avarohana": "S N3 D2 P M2 G3 R2 S",
+    "parent": "Mechakalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Adana": {
+    "arohana": "S R2 M1 P N3 S",
+    "avarohana": "S N3 D2 P M1 G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Ahiri": {
+    "arohana": "S R2 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Amritavarshini (Janya)": {
+    "arohana": "S G3 M2 D3 N3 S",
+    "avarohana": "S N3 D3 M2 G3 S",
+    "parent": "Chitrambari",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Arabi Kanada": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Ardradesi": {
+    "arohana": "S R2 G3 M1 P S",
+    "avarohana": "S P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Arunachala Kalyani": {
+    "arohana": "S R2 G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 R2 S",
+    "parent": "Mechakalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bageshri Kanada": {
+    "arohana": "S G2 M1 D2 N2 S",
+    "avarohana": "S N2 D2 M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bahudari Kanada": {
+    "arohana": "S R2 G3 M1 D2 S",
+    "avarohana": "S D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bhairavi Kanada": {
+    "arohana": "S R1 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R1 S",
+    "parent": "Hanumatodi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Begada": {
+    "arohana": "S G3 R2 G3 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bhairav Bahar": {
+    "arohana": "S R1 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R1 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bhanumati Janya": {
+    "arohana": "S R1 G1 M1 D1 N1 S",
+    "avarohana": "S N1 D1 M1 G1 R1 S",
+    "parent": "Bhanumati",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bhavani": {
+    "arohana": "S R1 G3 M1 P N3 S",
+    "avarohana": "S N3 P M1 G3 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bhimpalasi": {
+    "arohana": "S G2 M1 P N2 S",
+    "avarohana": "S N2 D2 M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bilaskhani Todi": {
+    "arohana": "S R1 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R1 S",
+    "parent": "Hanumatodi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Bilas Ragini": {
+    "arohana": "S R2 G3 M1 P D2 S",
+    "avarohana": "S N2 D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Buddhamanohari": {
+    "arohana": "S R2 M1 D2 S",
+    "avarohana": "S D2 M1 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandrakouns": {
+    "arohana": "S G2 M1 D1 N2 S",
+    "avarohana": "S N2 D1 M1 G2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandrakauns": {
+    "arohana": "S G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandranandan": {
+    "arohana": "S G2 M1 D2 N2 S",
+    "avarohana": "S N2 D2 M1 G2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandrika": {
+    "arohana": "S R2 P D2 S",
+    "avarohana": "S D2 P R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandramohana": {
+    "arohana": "S R2 G3 P S",
+    "avarohana": "S P G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chandraprabha": {
+    "arohana": "S R2 G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 R2 S",
+    "parent": "Kalyani",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chhayanat": {
+    "arohana": "S R2 G3 M1 P N3 S",
+    "avarohana": "S N3 D2 P M1 G3 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Chitra Ranjani": {
+    "arohana": "S G3 M1 P D2 N3 S",
+    "avarohana": "S N3 D2 P M1 G3 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Darbari Kanada": {
+    "arohana": "S R2 G2 M1 P D1 N2 S",
+    "avarohana": "S N2 D1 P M1 G2 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Devagandhari": {
+    "arohana": "S R2 M1 P D2 S",
+    "avarohana": "S N3 D2 P M1 R2 S",
+    "parent": "Sankarabharanam",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Dhanashree": {
+    "arohana": "S G2 M1 P N2 S",
+    "avarohana": "S N2 D2 M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Durga": {
+    "arohana": "S R2 M1 P D1 S",
+    "avarohana": "S D1 P M1 R2 S",
+    "parent": "Natabhairavi",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Gaula": {
+    "arohana": "S R1 M1 P N3 S",
+    "avarohana": "S N3 P M1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Gavati": {
+    "arohana": "S R2 M1 D2 S",
+    "avarohana": "S D2 M1 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Guhamanohari": {
+    "arohana": "S R2 G3 M1 D2 S",
+    "avarohana": "S D2 M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Gunakri": {
+    "arohana": "S R1 G1 M1 D1 N3 S",
+    "avarohana": "S N3 D1 M1 G1 R1 S",
+    "parent": "Mayamalavagowla",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Hamsanandi (Janya)": {
+    "arohana": "S G3 M2 D2 N3 S",
+    "avarohana": "S N3 D2 M2 G3 S",
+    "parent": "Gamanashrama",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Hindustani Kafi": {
+    "arohana": "S G2 M1 P D2 N2 S",
+    "avarohana": "S N2 D2 P M1 G2 R2 S",
+    "parent": "Kharaharapriya",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Janasammodini": {
+    "arohana": "S R2 G3 P D2 S",
+    "avarohana": "S D2 P G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Jayantasena": {
+    "arohana": "S R2 M1 P N2 S",
+    "avarohana": "S N2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Jothiswarupini Janya": {
+    "arohana": "S R3 G3 M2 D1 N2 S",
+    "avarohana": "S N2 D1 M2 G3 R3 S",
+    "parent": "Jyotisvarupini",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kaapi Narayani": {
+    "arohana": "S R2 G3 M1 P D2 S",
+    "avarohana": "S D2 P M1 G3 R2 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  },
+  "Kalavati": {
+    "arohana": "S G3 M1 D2 N3 S",
+    "avarohana": "S N3 D2 M1 G3 S",
+    "parent": "Harikambhoji",
+    "type": "Janya",
+    "keerthanas": [],
+    "songs": []
+  }
+}

@@ -180,10 +180,34 @@
 .raga-detail{ padding:28px; max-width:1100px; margin:0 auto }
 .detail-header{ display:flex; align-items:center; gap:12px; margin-bottom:18px }
 .back{ color:var(--muted); text-decoration:none }
-.detail-body{ display:flex; gap:18px }
-.detail-left{ flex:2; display:flex; flex-direction:column; gap:14px }
-.detail-right{ flex:1; display:flex; flex-direction:column; gap:14px }
-.detail-card{ background:var(--card-bg); padding:16px; border-radius:10px }
+.detail-body{ display:flex; gap:18px; align-items:flex-start }
+.detail-left{ flex:2; display:flex; flex-direction:column; gap:16px }
+.detail-right{ flex:1; display:flex; flex-direction:column; gap:16px }
+.detail-card{ background:var(--card-bg); padding:18px; border-radius:12px; box-shadow: 0 10px 30px rgba(15,25,35,0.04) }
+
+.title-block{ display:flex; flex-direction:column }
+.raga-title{ margin:0; font-size:26px; font-weight:800 }
+.meta-badges{ display:flex; gap:8px; margin-top:8px }
+.badge{ background:linear-gradient(90deg,#fff,#fff7e6); padding:6px 10px; border-radius:999px; font-weight:700; font-size:13px; color:#333; box-shadow:0 6px 18px rgba(120,120,150,0.06) }
+.badge.muted{ background:transparent; color:rgba(0,0,0,0.6); border:1px solid rgba(0,0,0,0.06); box-shadow:none }
+.badge.type{ background:linear-gradient(90deg,#e9f7ff,#f4fbff); color:#0b3b5a }
+
+.notation{ }
+.notation-box{ background:linear-gradient(180deg, #ffffff, #fbfbfd); padding:14px; border-radius:10px; box-shadow:0 12px 30px rgba(12,20,30,0.06); border:1px solid rgba(20,30,40,0.02) }
+.notation-row{ display:flex; gap:12px; align-items:center; margin:10px 0; flex-wrap:wrap }
+.notation-text{ background:rgba(250,248,244,0.9); padding:10px 12px; border-radius:8px; flex:1 }
+.notation-text.mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Segoe UI Mono', monospace; font-weight:700 }
+.notation .start-note{ margin-left:8px; font-weight:700 }
+.notation-actions{ display:flex; gap:8px; margin-top:14px; align-items:center }
+.play-btn{ background:linear-gradient(90deg,var(--accent),#ff9a6a); border:none; padding:9px 14px; border-radius:10px; color:#222; font-weight:800; cursor:pointer; box-shadow:0 8px 20px rgba(255,150,70,0.12) }
+.copy-btn{ background:transparent; border:1px solid rgba(0,0,0,0.06); padding:8px 12px; border-radius:8px; cursor:pointer }
+
+.detail-card ol{ margin:8px 0 0 18px }
+
+.note-pill{ display:inline-block; background:linear-gradient(90deg,#fffaf0,#fff0e6); padding:6px 10px; border-radius:999px; margin-right:8px; margin-top:8px; font-weight:700; box-shadow:0 8px 18px rgba(20,30,40,0.04) }
+.notes-row{ margin-top:10px }
+.card-heading{ margin:0 0 10px 0; font-size:16px; font-weight:800 }
+.small.muted{ color:rgba(0,0,0,0.55); font-size:13px }
 
 .title{
   margin:0 0 18px 0;
