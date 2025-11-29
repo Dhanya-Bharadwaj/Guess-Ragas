@@ -59,7 +59,7 @@ export default function RagaDetail() {
   return (
     <div className="raga-detail">
       <div className="detail-header">
-        <Link to="/learn" className="back">← Back to Learn</Link>
+        <Link to="/learn" className="back">← Back</Link>
         <div className="title-block">
           <h1 className="raga-title">{name}</h1>
           <div className="meta-badges">
