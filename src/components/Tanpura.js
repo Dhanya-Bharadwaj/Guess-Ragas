@@ -329,70 +329,82 @@ export default function Tanpura() {
   }, []);
 
   return (
-    <div className="tanpura-page" style={{padding:20}}>
-      <h2>Tanpura / Sruthi Box</h2>
-      <p>Select tonic (Sa), octave and play a continuous drone.</p>
-
-      <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:16, alignItems:'center'}}>
-        <div>
-          <label style={{display:'block', fontWeight:600}}>Tonic (Sa as pitch)</label>
-          <select value={tonic} onChange={e => setTonic(e.target.value)} style={{marginTop:8, width:'100%', padding:8}}>
-            {NOTES.map(n => <option key={n} value={n}>{n}</option>)}
-          </select>
-        </div>
-
-        <div className="control">
-          <label className="control-label">Reference Swara</label>
-          <select className="control-select" value={referenceSwara} onChange={e => setReferenceSwara(e.target.value)}>
-            {Object.keys(SWARA_SEMITONES).map(s => <option key={s} value={s}>{s}</option>)}
-          </select>
-          <div className="control-note">Reference swara emphasises a neighboring note (Pa/Ma etc.).</div>
-
-          <div className="control-switch">
-            <label style={{display:'flex', alignItems:'center', gap:8}}>
-              <input type="radio" name="refPlay" checked={refEnabled} onChange={() => setRefEnabled(true)} />
-              <span style={{fontSize:14}}>Play</span>
-            </label>
-            <label style={{display:'flex', alignItems:'center', gap:8}}>
-              <input type="radio" name="refPlay" checked={!refEnabled} onChange={() => setRefEnabled(false)} />
-              <span style={{fontSize:14}}>Mute</span>
-            </label>
+    <div className="tanpura-page">
+      <div className="tanpura-card">
+        <div className="tanpura-header">
+          <div>
+            <h2 className="tanpura-title">Tanpura / Sruthi Box</h2>
+            <div className="tanpura-sub">Select Shruthi (Sa) and play a continuous drone.</div>
           </div>
-
-          <div className="control-range">
-            <label className="control-label">Reference Volume</label>
-            <input type="range" min="0" max="1" step="0.01" value={refVolume} onChange={e=>setRefVolume(Number(e.target.value))} />
+          <div className="tanpura-actions">
+            {!running ? (
+              <button onClick={startDrone} className="tanpura-btn">Play</button>
+            ) : (
+              <button onClick={stopDrone} className="tanpura-btn tanpura-stop">Stop</button>
+            )}
           </div>
         </div>
 
-        <div style={{display:'flex', alignItems:'center', gap:8}}>
-          <label style={{fontWeight:600}}>Harmonics</label>
-          <div style={{display:'flex', alignItems:'center', gap:8}}>
-            <label style={{display:'flex', alignItems:'center', gap:6}}>
-              <input type="checkbox" checked={includePancham} onChange={e=>setIncludePancham(e.target.checked)} />
-              <span style={{fontSize:14}}>Enhanced</span>
-            </label>
+        <div className="tanpura-controls">
+          <div className="control">
+            <label className="control-label">Shruthi (Sa as pitch)</label>
+            <select className="control-select" value={tonic} onChange={e => setTonic(e.target.value)}>
+              {NOTES.map(n => <option key={n} value={n}>{n}</option>)}
+            </select>
           </div>
-          <div style={{fontSize:12, color:'#555'}}>Toggle stronger pancham-style harmonic.</div>
+
+          <div className="control">
+            <label className="control-label">Reference Swara</label>
+            <select className="control-select" value={referenceSwara} onChange={e => setReferenceSwara(e.target.value)}>
+              {Object.keys(SWARA_SEMITONES).map(s => <option key={s} value={s}>{s}</option>)}
+            </select>
+            <div className="control-note">Reference swara emphasises a neighboring note (Pa/Ma etc.).</div>
+            <div className="control-switch">
+              <label style={{display:'flex', alignItems:'center', gap:8}}>
+                <input type="radio" name="refPlay" checked={refEnabled} onChange={() => setRefEnabled(true)} />
+                <span style={{fontSize:14}}>Play</span>
+              </label>
+              <label style={{display:'flex', alignItems:'center', gap:8}}>
+                <input type="radio" name="refPlay" checked={!refEnabled} onChange={() => setRefEnabled(false)} />
+                <span style={{fontSize:14}}>Mute</span>
+              </label>
+            </div>
+            <div className="control-range">
+              <label className="control-label">Reference Volume</label>
+              <input type="range" min="0" max="1" step="0.01" value={refVolume} onChange={e=>setRefVolume(Number(e.target.value))} />
+            </div>
+          </div>
+
+          <div className="control control-inline">
+            <label className="control-label">Harmonics</label>
+            <div className="control-switch">
+              <label style={{display:'flex', alignItems:'center', gap:6}}>
+                <input type="checkbox" checked={includePancham} onChange={e=>setIncludePancham(e.target.checked)} />
+                <span style={{fontSize:14}}>Enhanced</span>
+              </label>
+            </div>
+            <div className="control-note">Toggle stronger pancham-style harmonic.</div>
+          </div>
+
+          <div className="control">
+            <label className="control-label">Volume</label>
+            <input className="control-range" type="range" min="0" max="1" step="0.01" value={volume} onChange={e=>setVolume(Number(e.target.value))} />
+          </div>
+
+          <div className="control control-inline">
+            <div style={{display:'flex', gap:12}}>
+              {!running ? (
+                  <button onClick={startDrone} className="upload-btn">Start Drone</button>
+                ) : (
+                  <button onClick={stopDrone} className="upload-btn">Stop Drone</button>
+                )}
+            </div>
+          </div>
         </div>
 
-        <div>
-          <label style={{display:'block', fontWeight:600}}>Volume</label>
-          <input type="range" min="0" max="1" step="0.01" value={volume} onChange={e=>setVolume(Number(e.target.value))} style={{marginTop:8, width:'100%'}} />
+        <div className="tanpura-footer">
+          <p style={{maxWidth:700, margin:0}}>Notes: This is a lightweight, browser-based drone using WebAudio. It approximates tanpura harmonics by mixing multiple sine oscillators. For the best experience use headphones and allow the page to play audio (browser may request interaction).</p>
         </div>
-
-        <div style={{display:'flex', gap:12}}>
-          {!running ? (
-            <button onClick={startDrone} className="upload-btn" style={{padding:'10px 18px'}}>Start Drone</button>
-          ) : (
-            <button onClick={stopDrone} className="upload-btn" style={{padding:'10px 18px'}}>Stop Drone</button>
-          )}
-          <button onClick={() => { stopDrone(); setTimeout(()=>startDrone(), 120); }} className="upload-btn" style={{padding:'10px 18px'}}>Restart</button>
-        </div>
-      </div>
-
-      <div style={{marginTop:18}}>
-        <p style={{maxWidth:700}}>Notes: This is a lightweight, browser-based drone using WebAudio. It approximates tanpura harmonics by mixing multiple sine oscillators. For the best experience use headphones and allow the page to play audio (browser may request interaction).</p>
       </div>
     </div>
   );

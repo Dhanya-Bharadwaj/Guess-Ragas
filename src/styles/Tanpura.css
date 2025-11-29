@@ -2,6 +2,8 @@
   --bg: #0f1724;
   --card: #0b1220;
   --muted: #9aa5b1;
+  --text-dark: #12202b;
+  --muted-dark: rgba(17,24,27,0.6);
   --accent: #f59e0b;
   --accent-2: #06b6d4;
   --glass: rgba(255,255,255,0.04);
@@ -16,12 +18,12 @@
 .tanpura-card{
   width:100%;
   max-width:980px;
-  /* flat panel: no shadows or borders */
-  background: transparent;
-  border: none;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
   border-radius:12px;
   padding:20px 22px;
-  color: #e6eef6;
+  box-shadow: 0 6px 28px rgba(2,6,23,0.6);
+  color: var(--text-dark);
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
@@ -34,8 +36,8 @@
   padding-bottom:12px;
 }
 
-.tanpura-title{ margin:0; font-size:20px;}
-.tanpura-sub{ margin:4px 0 0 0; color:var(--muted); font-size:13px }
+.tanpura-title{ margin:0; font-size:20px; color:var(--text-dark);}
+.tanpura-sub{ margin:4px 0 0 0; color:var(--muted-dark); font-size:13px }
 
 .tanpura-actions{ display:flex; gap:10px; }
 .tanpura-btn{ background:var(--accent); color:#071018; border:none; padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600 }
@@ -44,27 +46,44 @@
 
 .tanpura-controls{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; padding:18px 0 }
 .control{ display:flex; flex-direction:column }
-.control-label{ font-size:13px; font-weight:700; color:#eaf2ff }
-.control-select{ margin-top:8px; padding:8px 10px; border-radius:8px; background:var(--glass); border:1px solid rgba(255,255,255,0.03); color:inherit }
-.control-note{ margin-top:8px; color:var(--muted); font-size:12px }
+.control-label{ font-size:13px; font-weight:700; color:var(--text-dark) }
+.control-select{ margin-top:8px; padding:8px 10px; border-radius:8px; background:#ffffff; border:1px solid rgba(17,24,27,0.06); color:var(--text-dark) }
+.control-note{ margin-top:8px; color:var(--muted-dark); font-size:12px }
 .control-inline{ justify-content:center; }
 .control-switch{ display:flex; align-items:center; gap:8px; margin-top:8px }
 .control-range{ margin-top:10px; width:100% }
 
-.tanpura-footer{ border-top:1px solid rgba(255,255,255,0.03); padding-top:12px; color:var(--muted); font-size:13px }
+.tanpura-footer{ border-top:1px solid rgba(0,0,0,0.06); padding-top:12px; color:var(--muted-dark); font-size:13px }
 
 @media (max-width:640px){
   .tanpura-card{ padding:14px }
   .tanpura-title{ font-size:18px }
 }
 
+/* Controls grid already responsive, add spacing and mobile stack tweaks */
+.tanpura-controls{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; align-items:center; }
+.tanpura-actions .tanpura-btn{ padding:8px 14px }
+
+@media (max-width:880px){
+  .tanpura-visual{ height:120px }
+  .tanpura-controls{ grid-template-columns: 1fr; gap:12px }
+  .tanpura-orb{ right:12px; width:84px; height:84px }
+  .tanpura-card{ padding:14px }
+  .tanpura-title{ font-size:16px }
+}
+
+@media (max-width:420px){
+  .tanpura-orb{ display:none }
+  .tanpura-footer p{ font-size:13px }
+  .control-select, .control-range input, .upload-btn { width:100% }
+}
+
 /* Visual animated region for tanpura */
 .tanpura-visual-wrap{ display:flex; justify-content:center; padding:18px 0 8px; }
-.tanpura-visual{ --tanpura-energy:0; --tanpura-pulse:0.6; position:relative; width:100%; max-width:920px; height:160px; border-radius:10px; background: transparent; overflow:hidden; }
+.tanpura-visual{ --tanpura-energy:0; --tanpura-pulse:0.6; position:relative; width:100%; max-width:920px; height:160px; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(2,6,23,0.06)); box-shadow: inset 0 1px 0 rgba(255,255,255,0.02); overflow:hidden; }
 .tanpura-orb{ position:absolute; right:22px; top:50%; transform:translateY(-50%) scale(var(--tanpura-pulse)); width:110px; height:110px; border-radius:999px; pointer-events:none;
   background: radial-gradient(circle at 35% 30%, rgba(245,158,11,0.85), rgba(6,182,212,0.12) 55%, rgba(3,7,18,0.0) 70%);
-  /* reduce heavy shadows for flat appearance */
-  box-shadow: none;
+  box-shadow: 0 18px 50px rgba(6,182,212,0.06), 0 6px 28px rgba(245,158,11,0.06);
   transition: transform 160ms ease, opacity 180ms ease;
   opacity: calc(0.18 + var(--tanpura-energy));
   filter: blur(6px);
@@ -80,8 +99,8 @@
 @keyframes tanpura-breath { 0% { transform: scale(1); } 50% { transform: scale(1.004); } 100% { transform: scale(1); } }
 .tanpura-visual{ animation: tanpura-breath 8s ease-in-out infinite; }
 
-/* enhance focus when playing: subtle scale on orb (no shadow) */
-.tanpura-card:has(.tanpura-actions .tanpura-stop) .tanpura-orb{ transform: translateY(-50%) scale(calc(var(--tanpura-pulse) + 0.12)); }
+/* enhance focus when playing */
+.tanpura-card:has(.tanpura-actions .tanpura-stop) .tanpura-visual{ box-shadow: 0 12px 40px rgba(2,6,23,0.5); }
 
 /* small responsive adjustments */
 @media (max-width:640px){
