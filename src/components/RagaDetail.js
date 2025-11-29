@@ -92,7 +92,6 @@ export default function RagaDetail() {
                 <div className="notation-actions">
                   <button className="play-btn" aria-label={`Play arohana of ${name}`}>Play Arohana ▶</button>
                   <button className="play-btn" aria-label={`Play avarohana of ${name}`}>Play Avarohana ▶</button>
-                  <button className="copy-btn" onClick={() => navigator.clipboard && navigator.clipboard.writeText(`${name} — ${arohanaText} / ${avarohanaText}`)}>Copy</button>
                 </div>
               </>
             ) : (
@@ -111,14 +110,7 @@ export default function RagaDetail() {
             )}
           </div>
 
-          <div className="detail-card">
-            <h3 className="card-heading">Practice Tips</h3>
-            <ul>
-              <li>Start slow: play arohana and avarohana with a metronome at 60 BPM.</li>
-              <li>Sing each swara clearly; focus on gamakas for the raga.</li>
-              <li>Practice common prayogas (short phrases) from compositions.</li>
-            </ul>
-          </div>
+          {/** Practice Tips removed per user request */}
         </div>
 
         <aside className="detail-right">
@@ -133,22 +125,52 @@ export default function RagaDetail() {
             )}
           </div>
 
-          <div className="detail-card">
-            <h3 className="card-heading">Composer Notes</h3>
-            <p className="small muted">Add composer notes, origin stories, and key prayogas to help learners.</p>
-          </div>
-
-          <div className="detail-card">
-            <h3 className="card-heading">Quick Facts</h3>
-            <ul>
-              <li><strong>Notes:</strong> {(notesList && notesList.length ? notesList.join(', ') : '—')}</li>
-              <li><strong>Type:</strong> {(meta && meta.type) || '—'}</li>
-              {parentProvided && (
-                <li><strong>Parent:</strong> {parentKey ? <Link to={`/raga/${encodeURIComponent(parentKey)}`}>{parentKey}</Link> : parentProvided}</li>
-              )}
-            </ul>
-          </div>
+          {/** Composer Notes and Quick Facts removed per user request */}
         </aside>
+      </div>
+      {/* Bottom navigation: prev / next raga with visible path in corners */}
+      <div className="detail-footer" style={{display:'flex', justifyContent:'space-between', marginTop:18}}>
+        <div className="prev-wrap">
+          {(() => {
+            // Use the same ordering as the Learn page: sorted melakarta and janya lists.
+            const melNames = curated.melakarta.map((r) => r.replace(/^\d+\s+/, ''));
+            const melSorted = [...melNames].sort((a, b) => a.localeCompare(b));
+            const janyaList = curated.janya || [];
+            const janyaSorted = [...janyaList].sort((a, b) => a.localeCompare(b));
+
+            // If current raga is a melakarta, navigate within melakarta list; otherwise, navigate within janya list
+            const list = melNumber ? melSorted : janyaSorted;
+            const idx = list.findIndex((r) => r.toLowerCase() === name.toLowerCase());
+            const prev = idx > 0 ? list[idx - 1] : null;
+            if (!prev) return null;
+            const path = `/raga/${encodeURIComponent(prev)}`;
+            return (
+              <div style={{textAlign:'left'}}>
+                <Link to={path} className="btn ghost">← Prev: {prev}</Link>
+              </div>
+            );
+          })()}
+        </div>
+
+        <div className="next-wrap">
+          {(() => {
+            const melNames = curated.melakarta.map((r) => r.replace(/^\d+\s+/, ''));
+            const melSorted = [...melNames].sort((a, b) => a.localeCompare(b));
+            const janyaList = curated.janya || [];
+            const janyaSorted = [...janyaList].sort((a, b) => a.localeCompare(b));
+
+            const list = melNumber ? melSorted : janyaSorted;
+            const idx = list.findIndex((r) => r.toLowerCase() === name.toLowerCase());
+            const next = idx >= 0 && idx < list.length - 1 ? list[idx + 1] : null;
+            if (!next) return null;
+            const path = `/raga/${encodeURIComponent(next)}`;
+            return (
+              <div style={{textAlign:'right'}}>
+                <Link to={path} className="btn ghost">Next: {next} →</Link>
+              </div>
+            );
+          })()}
+        </div>
       </div>
     </div>
   );

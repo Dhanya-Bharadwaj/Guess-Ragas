@@ -53,7 +53,7 @@ export const melakarta = [
   "48 Divyamani",
   "49 Dhavalambari",
   "50 Namanarayani",
-  "51 Kamavardhani",
+  "51 Pantuvarali",
   "52 Ramapriya",
   "53 Gamanashrama",
   "54 Vishwambari",

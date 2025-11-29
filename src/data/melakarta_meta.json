@@ -1,7 +1,7 @@
 [
 	{"number":1,"raga":"Kanakangi","type":"Melakarta","arohanam":"S R1 G1 M1 P D1 N1 S","avarohanam":"S N1 D1 P M1 G1 R1 S"},
 	{"number":2,"raga":"Ratnangi","type":"Melakarta","arohanam":"S R1 G1 M1 P D1 N2 S","avarohanam":"S N2 D1 P M1 G1 R1 S"},
-	{"number":3,"raga":"Ganatkri","type":"Melakarta","arohanam":"S R1 G1 M1 P D1 N3 S","avarohanam":"S N3 D1 P M1 G1 R1 S"},
+	{"number":3,"raga":"Ganamurti","type":"Melakarta","arohanam":"S R1 G1 M1 P D1 N3 S","avarohanam":"S N3 D1 P M1 G1 R1 S"},
 	{"number":4,"raga":"Vanaspati","type":"Melakarta","arohanam":"S R1 G1 M1 P D2 N2 S","avarohanam":"S N2 D2 P M1 G1 R1 S"},
 	{"number":5,"raga":"Manavati","type":"Melakarta","arohanam":"S R1 G1 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G1 R1 S"},
 	{"number":6,"raga":"Tanarupi","type":"Melakarta","arohanam":"S R1 G1 M1 P D3 N3 S","avarohanam":"S N3 D3 P M1 G1 R1 S"},
@@ -17,21 +17,21 @@
 	{"number":14,"raga":"Vakulabharanam","type":"Melakarta","arohanam":"S R1 G3 M1 P D1 N2 S","avarohanam":"S N2 D1 P M1 G3 R1 S"},
 	{"number":15,"raga":"Mayamalavagowla","type":"Melakarta","arohanam":"S R1 G3 M1 P D1 N3 S","avarohanam":"S N3 D1 P M1 G3 R1 S"},
 	{"number":16,"raga":"Chakravakam","type":"Melakarta","arohanam":"S R1 G3 M1 P D2 N2 S","avarohanam":"S N2 D2 P M1 G3 R1 S"},
-	{"number":17,"raga":"Suryakantham","type":"Melakarta","arohanam":"S R1 G3 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G3 R1 S"},
+	{"number":17,"raga":"Suryakantam","type":"Melakarta","arohanam":"S R1 G3 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G3 R1 S"},
 	{"number":18,"raga":"Hatakambari","type":"Melakarta","arohanam":"S R1 G3 M1 P D3 N3 S","avarohanam":"S N3 D3 P M1 G3 R1 S"},
 
-	{"number":19,"raga":"Jankaradhvani","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N1 S","avarohanam":"S N1 D1 P M1 G2 R2 S"},
+	{"number":19,"raga":"Jhankaradhvani","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N1 S","avarohanam":"S N1 D1 P M1 G2 R2 S"},
 	{"number":20,"raga":"Natabhairavi","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N2 S","avarohanam":"S N2 D1 P M1 G2 R2 S"},
 	{"number":21,"raga":"Kiravani","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N3 S","avarohanam":"S N3 D1 P M1 G2 R2 S"},
 	{"number":22,"raga":"Kharaharapriya","type":"Melakarta","arohanam":"S R2 G2 M1 P D2 N2 S","avarohanam":"S N2 D2 P M1 G2 R2 S"},
-	{"number":23,"raga":"Gourimanohari","type":"Melakarta","arohanam":"S R2 G2 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G2 R2 S"},
+	{"number":23,"raga":"Gowrimanohari","type":"Melakarta","arohanam":"S R2 G2 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G2 R2 S"},
 	{"number":24,"raga":"Varunapriya","type":"Melakarta","arohanam":"S R2 G2 M1 P D3 N3 S","avarohanam":"S N3 D3 P M1 G2 R2 S"},
 
 	{"number":25,"raga":"Mararanjani","type":"Melakarta","arohanam":"S R2 G3 M1 P D1 N1 S","avarohanam":"S N1 D1 P M1 G3 R2 S"},
 	{"number":26,"raga":"Charukesi","type":"Melakarta","arohanam":"S R2 G3 M1 P D1 N2 S","avarohanam":"S N2 D1 P M1 G3 R2 S"},
 	{"number":27,"raga":"Sarasangi","type":"Melakarta","arohanam":"S R2 G3 M1 P D1 N3 S","avarohanam":"S N3 D1 P M1 G3 R2 S"},
 	{"number":28,"raga":"Harikambhoji","type":"Melakarta","arohanam":"S R2 G3 M1 P D2 N2 S","avarohanam":"S N2 D2 P M1 G3 R2 S"},
-	{"number":29,"raga":"Dheerasankarabharanam","type":"Melakarta","arohanam":"S R2 G3 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G3 R2 S"},
+	{"number":29,"raga":"Shankarabharanam","type":"Melakarta","arohanam":"S R2 G3 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G3 R2 S"},
 	{"number":30,"raga":"Naganandini","type":"Melakarta","arohanam":"S R2 G3 M1 P D3 N3 S","avarohanam":"S N3 D3 P M1 G3 R2 S"},
 
 	{"number":31,"raga":"Yagapriya","type":"Melakarta","arohanam":"S R3 G3 M1 P D1 N1 S","avarohanam":"S N1 D1 P M1 G3 R3 S"},
@@ -50,8 +50,8 @@
 
 	{"number":43,"raga":"Gavambodhi","type":"Melakarta","arohanam":"S R1 G2 M2 P D1 N1 S","avarohanam":"S N1 D1 P M2 G2 R1 S"},
 	{"number":44,"raga":"Bhavapriya","type":"Melakarta","arohanam":"S R1 G2 M2 P D1 N2 S","avarohanam":"S N2 D1 P M2 G2 R1 S"},
-	{"number":45,"raga":"Subhapantuvarali","type":"Melakarta","arohanam":"S R1 G2 M2 P D1 N3 S","avarohanam":"S N3 D1 P M2 G2 R1 S"},
-	{"number":46,"raga":"Shadvidhamargini","type":"Melakarta","arohanam":"S R1 G2 M2 P D2 N2 S","avarohanam":"S N2 D2 P M2 G2 R1 S"},
+	{"number":45,"raga":"Shubhapantuvarali","type":"Melakarta","arohanam":"S R1 G2 M2 P D1 N3 S","avarohanam":"S N3 D1 P M2 G2 R1 S"},
+	{"number":46,"raga":"Shadvidamargini","type":"Melakarta","arohanam":"S R1 G2 M2 P D2 N2 S","avarohanam":"S N2 D2 P M2 G2 R1 S"},
 	{"number":47,"raga":"Suvarnangi","type":"Melakarta","arohanam":"S R1 G2 M2 P D2 N3 S","avarohanam":"S N3 D2 P M2 G2 R1 S"},
 	{"number":48,"raga":"Divyamani","type":"Melakarta","arohanam":"S R1 G2 M2 P D3 N3 S","avarohanam":"S N3 D3 P M2 G2 R1 S"},
 
@@ -77,7 +77,7 @@
 	{"number":66,"raga":"Chitrambari","type":"Melakarta","arohanam":"S R2 G3 M2 P D3 N3 S","avarohanam":"S N3 D3 P M2 G3 R2 S"},
 
 	{"number":67,"raga":"Sucharitra","type":"Melakarta","arohanam":"S R3 G3 M2 P D1 N1 S","avarohanam":"S N1 D1 P M2 G3 R3 S"},
-	{"number":68,"raga":"Jyotisvarupini","type":"Melakarta","arohanam":"S R3 G3 M2 P D1 N2 S","avarohanam":"S N2 D1 P M2 G3 R3 S"},
+	{"number":68,"raga":"Jyoti Swarupini","type":"Melakarta","arohanam":"S R3 G3 M2 P D1 N2 S","avarohanam":"S N2 D1 P M2 G3 R3 S"},
 	{"number":69,"raga":"Dhatuvardhani","type":"Melakarta","arohanam":"S R3 G3 M2 P D1 N3 S","avarohanam":"S N3 D1 P M2 G3 R3 S"},
 	{"number":70,"raga":"Nasikabhushani","type":"Melakarta","arohanam":"S R3 G3 M2 P D2 N2 S","avarohanam":"S N2 D2 P M2 G3 R3 S"},
 	{"number":71,"raga":"Kosalam","type":"Melakarta","arohanam":"S R3 G3 M2 P D2 N3 S","avarohanam":"S N3 D2 P M2 G3 R3 S"},

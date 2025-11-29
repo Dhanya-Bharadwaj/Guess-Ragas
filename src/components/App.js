@@ -40,7 +40,12 @@ function App() {
         <div className="morning-sky" />
 
         <nav className="nav">
-          <div className="brand"><Link to="/" className="brand-link">Raga Detector</Link></div>
+          <div className="brand">
+            <Link to="/" className="brand-link">
+              <span className="brand-badge">RD</span>
+              <span className="brand-text">Raga Detector</span>
+            </Link>
+          </div>
           <div className="nav-right">
             <Link to="/learn" className="ragas-btn">Learn Ragas</Link>
             <Link to="/tanpura" className="ragas-btn">Tanpura</Link>

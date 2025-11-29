@@ -1,29 +1,42 @@
 import React, { useEffect, useRef, useState } from 'react';
+import '../styles/Tanpura.css';
 
 // Simple tanpura-like drone using WebAudio
 export default function Tanpura() {
   const audioCtxRef = useRef(null);
   const gainRef = useRef(null);
   const oscRefs = useRef([]);
+  const refOscRef = useRef(null);
+  const filterRef = useRef(null);
+  const delayRef = useRef(null);
   const [running, setRunning] = useState(false);
   const [tonic, setTonic] = useState('C');
   // replace octave selector with Indian swara selector (Sa, Ri, Ga, Ma, Pa, Dha, Ni)
   const [referenceSwara, setReferenceSwara] = useState('Sa');
+  const [refVolume, setRefVolume] = useState(0.28);
+  const [refEnabled, setRefEnabled] = useState(true);
   const [volume, setVolume] = useState(0.3);
   const [includePancham, setIncludePancham] = useState(true);
 
   const NOTES = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
 
-  // Map common Carnatic swaras to semitone offsets from Sa (using common variants)
-  // This is a simplified mapping (Sa=0). Variants (R1/R2/R3 etc.) are not listed; using the common major-like mapping:
   const SWARA_SEMITONES = {
     'Sa': 0,
-    'Ri': 2, // approx Ri2
-    'Ga': 4, // approx Ga3
-    'Ma': 5, // Ma1
+    'R1': 1,
+    'R2': 2,
+    'R3': 3,
+    'G1': 2,
+    'G2': 3,
+    'G3': 4,
+    'M1': 5,
+    'M2': 6,
     'Pa': 7,
-    'Dha': 9,
-    'Ni': 11
+    'D1': 8,
+    'D2': 9,
+    'D3': 10,
+    'N1': 9,
+    'N2': 10,
+    'N3': 11
   };
 
   function noteFreq(note, oct) {
@@ -62,6 +75,7 @@ export default function Tanpura() {
     filter.frequency.value = 5000;
     filter.Q.value = 0.8;
     filter.connect(master);
+    filterRef.current = filter;
 
     // small delay + feedback for body/reverb
     const delay = ctx.createDelay(0.5);
@@ -77,6 +91,7 @@ export default function Tanpura() {
     fb.connect(delay);
     // route some of the filter output into delay
     delay.connect(master);
+    delayRef.current = delay;
 
     // assume Sa at selected tonic and octave 4 by default for base frequency
     const saOct = 4;
@@ -127,23 +142,29 @@ export default function Tanpura() {
 
     oscRefs.current = tonicOscs.slice();
 
-    // add selected reference swara (e.g., Pa/Pancham, Ma) as a prominent neighbor
-    const refFreq = swaraFreqForSa(tonic, 4, referenceSwara);
-    const refOsc = ctx.createOscillator();
-    refOsc.type = 'sine';
-    refOsc.frequency.value = refFreq;
-    const rg = ctx.createGain();
-    // smooth attack for reference swara
-    rg.gain.setValueAtTime(0, ctx.currentTime);
-    rg.gain.linearRampToValueAtTime(includePancham ? 0.28 : 0.2, ctx.currentTime + 0.06);
-    const rp = ctx.createStereoPanner();
-    rp.pan.value = 0.12;
-    refOsc.connect(rg);
-    rg.connect(rp);
-    rp.connect(filter);
-    rp.connect(delay);
-    refOsc.start();
-    oscRefs.current.push({o: refOsc, g: rg, p: rp});
+    // add selected reference swara (e.g., Pa/Pancham, Ma) as a prominent neighbor only if enabled
+    if (refEnabled) {
+      const refFreq = swaraFreqForSa(tonic, 4, referenceSwara);
+      const refOsc = ctx.createOscillator();
+      refOsc.type = 'sine';
+      refOsc.frequency.value = refFreq;
+      const rg = ctx.createGain();
+      // smooth attack for reference swara
+      rg.gain.setValueAtTime(0, ctx.currentTime);
+      rg.gain.linearRampToValueAtTime(refVolume || (includePancham ? 0.28 : 0.2), ctx.currentTime + 0.06);
+      const rp = ctx.createStereoPanner();
+      rp.pan.value = 0.12;
+      refOsc.connect(rg);
+      rg.connect(rp);
+      rp.connect(filter);
+      rp.connect(delay);
+      refOsc.start();
+      // keep a dedicated ref to the reference swara so we can update it live
+      refOscRef.current = { o: refOsc, g: rg, p: rp };
+      oscRefs.current.push(refOscRef.current);
+    } else {
+      refOscRef.current = null;
+    }
 
     // gentle octave above Sa to provide fullness
     const octaveOsc = ctx.createOscillator();
@@ -194,6 +215,53 @@ export default function Tanpura() {
     setRunning(true);
   }
 
+  function createRefOsc() {
+    const ctx = audioCtxRef.current;
+    if (!ctx || !filterRef.current || !delayRef.current) return;
+    if (refOscRef.current) {
+      // already present — update
+      try {
+        const newFreq = swaraFreqForSa(tonic, 4, referenceSwara);
+        refOscRef.current.o.frequency.setTargetAtTime(newFreq, ctx.currentTime, 0.02);
+        refOscRef.current.g.gain.setTargetAtTime(refVolume, ctx.currentTime, 0.02);
+      } catch (e) {}
+      return;
+    }
+    const refFreq = swaraFreqForSa(tonic, 4, referenceSwara);
+    const refOsc = ctx.createOscillator();
+    refOsc.type = 'sine';
+    refOsc.frequency.value = refFreq;
+    const rg = ctx.createGain();
+    rg.gain.setValueAtTime(0, ctx.currentTime);
+    rg.gain.linearRampToValueAtTime(refVolume, ctx.currentTime + 0.06);
+    const rp = ctx.createStereoPanner();
+    rp.pan.value = 0.12;
+    refOsc.connect(rg);
+    rg.connect(rp);
+    rp.connect(filterRef.current);
+    rp.connect(delayRef.current);
+    refOsc.start();
+    refOscRef.current = { o: refOsc, g: rg, p: rp };
+    oscRefs.current.push(refOscRef.current);
+  }
+
+  function removeRefOsc() {
+    const ctx = audioCtxRef.current;
+    if (!ctx || !refOscRef.current) return;
+    try {
+      refOscRef.current.g.gain.setTargetAtTime(0, ctx.currentTime, 0.02);
+      setTimeout(() => {
+        try { if (refOscRef.current.o) refOscRef.current.o.stop(); } catch (e) {}
+        oscRefs.current = oscRefs.current.filter(x => x !== refOscRef.current);
+        refOscRef.current = null;
+      }, 140);
+    } catch (e) {
+      try { if (refOscRef.current.o) refOscRef.current.o.stop(); } catch (e) {}
+      oscRefs.current = oscRefs.current.filter(x => x !== refOscRef.current);
+      refOscRef.current = null;
+    }
+  }
+
   function stopDrone() {
     const ctx = audioCtxRef.current;
     if (!ctx) return;
@@ -208,8 +276,11 @@ export default function Tanpura() {
       } catch (e) {}
     });
     oscRefs.current = [];
+    refOscRef.current = null;
     try { ctx.close(); } catch (e) {}
     audioCtxRef.current = null;
+    filterRef.current = null;
+    delayRef.current = null;
     setRunning(false);
   }
 
@@ -220,12 +291,37 @@ export default function Tanpura() {
 
   useEffect(() => {
     // restart drone when tonic or includePancham changes while running
+    // Changing referenceSwara updates the reference oscillator live (no full restart)
     if (!running) return;
     stopDrone();
     // small timeout to ensure context closed
     setTimeout(() => startDrone(), 100);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tonic, referenceSwara, includePancham]);
+  }, [tonic, includePancham]);
+
+  useEffect(() => {
+    // update or create/remove reference swara oscillator live when changed
+    if (!running) return;
+    const ctx = audioCtxRef.current;
+    if (!ctx) return;
+    try {
+      if (refEnabled) {
+        if (!refOscRef.current) {
+          createRefOsc();
+        } else {
+          const newFreq = swaraFreqForSa(tonic, 4, referenceSwara);
+          refOscRef.current.o.frequency.setTargetAtTime(newFreq, ctx.currentTime, 0.02);
+          refOscRef.current.g.gain.setTargetAtTime(refVolume, ctx.currentTime, 0.02);
+        }
+      } else {
+        if (refOscRef.current) removeRefOsc();
+      }
+    } catch (e) {
+      stopDrone();
+      setTimeout(() => startDrone(), 120);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [referenceSwara, includePancham, refVolume, refEnabled, tonic]);
 
   useEffect(() => {
     return () => { stopDrone(); };
@@ -245,12 +341,28 @@ export default function Tanpura() {
           </select>
         </div>
 
-        <div>
-          <label style={{display:'block', fontWeight:600}}>Reference Swara</label>
-          <select value={referenceSwara} onChange={e => setReferenceSwara(e.target.value)} style={{marginTop:8, width:'100%', padding:8}}>
-            {['Sa','Ri','Ga','Ma','Pa','Dha','Ni'].map(s => <option key={s} value={s}>{s}</option>)}
+        <div className="control">
+          <label className="control-label">Reference Swara</label>
+          <select className="control-select" value={referenceSwara} onChange={e => setReferenceSwara(e.target.value)}>
+            {Object.keys(SWARA_SEMITONES).map(s => <option key={s} value={s}>{s}</option>)}
           </select>
-          <div style={{fontSize:12, color:'#555', marginTop:6}}>Reference swara controls which additional swara (e.g., Pa/Ma) is emphasized in the drone.</div>
+          <div className="control-note">Reference swara emphasises a neighboring note (Pa/Ma etc.).</div>
+
+          <div className="control-switch">
+            <label style={{display:'flex', alignItems:'center', gap:8}}>
+              <input type="radio" name="refPlay" checked={refEnabled} onChange={() => setRefEnabled(true)} />
+              <span style={{fontSize:14}}>Play</span>
+            </label>
+            <label style={{display:'flex', alignItems:'center', gap:8}}>
+              <input type="radio" name="refPlay" checked={!refEnabled} onChange={() => setRefEnabled(false)} />
+              <span style={{fontSize:14}}>Mute</span>
+            </label>
+          </div>
+
+          <div className="control-range">
+            <label className="control-label">Reference Volume</label>
+            <input type="range" min="0" max="1" step="0.01" value={refVolume} onChange={e=>setRefVolume(Number(e.target.value))} />
+          </div>
         </div>
 
         <div style={{display:'flex', alignItems:'center', gap:8}}>
