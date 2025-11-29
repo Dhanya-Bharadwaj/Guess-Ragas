@@ -99,6 +99,18 @@ export default function RagaDetail() {
             )}
           </div>
 
+          {/* Mobile-only Popular Songs placed between notation and keerthanas on small screens */}
+          <div className="detail-card popular-songs-mobile" aria-hidden="true">
+            <h3 className="card-heading">Popular Songs</h3>
+            {meta ? (
+              <ol>
+                {(meta.songs || []).slice(0,6).map((s) => <li key={s}>{s}</li>)}
+              </ol>
+            ) : (
+              <p>-</p>
+            )}
+          </div>
+
           <div className="detail-card">
             <h3 className="card-heading">Popular Keerthanas</h3>
             {meta ? (
