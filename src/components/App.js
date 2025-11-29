@@ -4,6 +4,7 @@ import '../styles/App.css';
 import { curated } from '../data/ragas';
 import LearnRagas from './LearnRagas';
 import RagaDetail from './RagaDetail';
+import Tanpura from './Tanpura';
 
 function App() {
   const [showRagas, setShowRagas] = useState(false);
@@ -42,6 +43,7 @@ function App() {
           <div className="brand"><Link to="/" className="brand-link">Raga Detector</Link></div>
           <div className="nav-right">
             <Link to="/learn" className="ragas-btn">Learn Ragas</Link>
+            <Link to="/tanpura" className="ragas-btn">Tanpura</Link>
           </div>
         </nav>
 
@@ -87,6 +89,7 @@ function App() {
 
           <Route path="/learn" element={<LearnRagas />} />
           <Route path="/raga/:id" element={<RagaDetail />} />
+          <Route path="/tanpura" element={<Tanpura />} />
         </Routes>
       </div>
     </BrowserRouter>

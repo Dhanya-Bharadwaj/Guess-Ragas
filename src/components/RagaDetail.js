@@ -7,14 +7,36 @@ import curated from '../data/ragas';
 export default function RagaDetail() {
   const { id } = useParams();
   const name = decodeURIComponent(id || 'Unknown');
-  const meta = (melakartaMeta[name] || janyaMeta[name]) || null;
 
   // Normalize helper to match parent names against canonical keys in the dataset
   const normalize = (s) => (s || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Helper: find metadata entry from a collection that may be an object map or an array
+  function findMeta(collection, ragaName) {
+    if (!collection) return null;
+    if (Array.isArray(collection)) {
+      const key = normalize(ragaName);
+      return collection.find((item) => normalize(item.raga) === key) || null;
+    }
+    // object map case
+    return collection[ragaName] || collection[Object.keys(collection).find((k) => normalize(k) === normalize(ragaName))] || null;
+  }
+
+  // Resolve metadata from melakarta or janya sources (support both array and object forms)
+  const meta = findMeta(melakartaMeta, name) || findMeta(janyaMeta, name) || null;
+
+  // Normalize field names: some sources use `arohana`/`avarohana`, others use `arohanam`/`avarohanam`.
+  const arohanaText = meta ? (meta.arohana || meta.arohanam || '') : '';
+  const avarohanaText = meta ? (meta.avarohana || meta.avarohanam || '') : '';
+  const notesList = meta ? (meta.notes || meta.note || []) : [];
+
   const parentProvided = meta && meta.parent ? meta.parent : null;
-  const parentKey = parentProvided
-    ? Object.keys(melakartaMeta).find((k) => normalize(k) === normalize(parentProvided))
-    : null;
+  const parentKey = parentProvided ? (
+    // find a matching key/name in melakarta metadata
+    Array.isArray(melakartaMeta)
+      ? (melakartaMeta.find((it) => normalize(it.raga) === normalize(parentProvided)) || {}).raga || null
+      : Object.keys(melakartaMeta).find((k) => normalize(k) === normalize(parentProvided))
+  ) : null;
 
   // Try to find melakarta number (if present in curated list like "1 Kanakangi")
   const melIndex = curated && curated.melakarta
@@ -59,18 +81,18 @@ export default function RagaDetail() {
               <>
                 <div className="notation-box">
                   <div className="notation-row"><strong>Arohana:</strong>
-                    <div className="notation-text mono">{meta.arohana || '—'}</div>
+                    <div className="notation-text mono">{arohanaText || '—'}</div>
                   </div>
                   <div className="notation-row"><strong>Avarohana:</strong>
-                    <div className="notation-text mono">{meta.avarohana || '—'}</div>
+                    <div className="notation-text mono">{avarohanaText || '—'}</div>
                   </div>
-                  {renderNotes(meta.notes)}
+                  {renderNotes(notesList)}
                 </div>
 
                 <div className="notation-actions">
                   <button className="play-btn" aria-label={`Play arohana of ${name}`}>Play Arohana ▶</button>
                   <button className="play-btn" aria-label={`Play avarohana of ${name}`}>Play Avarohana ▶</button>
-                  <button className="copy-btn" onClick={() => navigator.clipboard && navigator.clipboard.writeText(`${name} — ${meta.arohana} / ${meta.avarohana}`)}>Copy</button>
+                  <button className="copy-btn" onClick={() => navigator.clipboard && navigator.clipboard.writeText(`${name} — ${arohanaText} / ${avarohanaText}`)}>Copy</button>
                 </div>
               </>
             ) : (
@@ -119,7 +141,7 @@ export default function RagaDetail() {
           <div className="detail-card">
             <h3 className="card-heading">Quick Facts</h3>
             <ul>
-              <li><strong>Notes:</strong> {(meta && meta.notes && meta.notes.join(', ')) || '—'}</li>
+              <li><strong>Notes:</strong> {(notesList && notesList.length ? notesList.join(', ') : '—')}</li>
               <li><strong>Type:</strong> {(meta && meta.type) || '—'}</li>
               {parentProvided && (
                 <li><strong>Parent:</strong> {parentKey ? <Link to={`/raga/${encodeURIComponent(parentKey)}`}>{parentKey}</Link> : parentProvided}</li>
