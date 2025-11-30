@@ -233,10 +233,45 @@
 .notation .start-note{ margin-left:8px; font-weight:700 }
 .notation-actions{ display:flex; gap:8px; margin-top:14px; align-items:center }
 .play-btn{ background:linear-gradient(90deg,var(--accent),#ff9a6a); border:none; padding:9px 14px; border-radius:10px; color:#222; font-weight:800; cursor:pointer; box-shadow:0 8px 20px rgba(255,150,70,0.12) }
+.play-btn.play-toggle{ display:inline-grid; place-items:center; width:42px; height:36px; padding:0; border-radius:8px; flex:0 0 42px; min-width:42px }
+.play-btn.play-toggle svg{ color:#12202b }
+
+/* Ensure controls stay readable on narrow screens */
+.notation-actions{ display:flex; gap:10px; align-items:center }
+.audio-meta{ flex:1 1 auto; min-width:140px; display:flex; align-items:center; gap:8px }
+.progress{ flex:1 1 120px; min-width:120px; position:relative; width:auto }
+.time-elapsed, .time-duration{ flex:0 0 auto; min-width:44px; white-space:nowrap }
+
+@media (max-width:520px){
+  .play-btn.play-toggle{ width:36px; height:34px; min-width:36px; flex:0 0 36px }
+  .play-btn{ padding:8px 10px }
+  .progress{ min-width:100px }
+}
+
+@media (max-width:420px){
+  /* allow controls to wrap so icon doesn't get squashed and time labels remain visible */
+  .notation-actions{ flex-wrap:wrap; gap:8px }
+  .audio-meta{ order:3; width:100%; justify-content:space-between }
+  .play-btn{ flex:0 0 auto }
+  .progress{ width:100%; min-width:120px }
+  .time-elapsed, .time-duration{ min-width:40px; font-size:12px }
+}
 /* copy-btn removed - UI no longer includes copy actions */
 /* retained class removed intentionally */
 
 .detail-card ol{ margin:8px 0 0 18px }
+
+/* Audio progress / player visuals used in RagaDetail */
+.notation-actions{ display:flex; gap:12px; align-items:center; position:relative; z-index:1 }
+.audio-meta{ display:flex; align-items:center; gap:10px }
+.time-elapsed, .time-duration{ font-weight:700; color:rgba(0,0,0,0.65); font-size:13px; min-width:44px; text-align:center }
+.progress{ position:relative; width:260px; height:10px; background:rgba(0,0,0,0.06); border-radius:999px; cursor:pointer; z-index:0 }
+.progress-bar{ position:absolute; left:0; top:0; bottom:0; width:0%; background:linear-gradient(90deg,#ffd7b3,#ffb86b); border-radius:999px }
+.progress-thumb{ position:absolute; top:50%; width:12px; height:12px; transform:translate(-50%,-50%); background:white; border:2px solid #ffb86b; border-radius:50%; box-shadow:0 6px 16px rgba(18,30,50,0.08); pointer-events:none }
+
+@media (max-width:560px){
+  .progress{ width:160px }
+}
 
 .note-pill{ display:inline-block; background:linear-gradient(90deg,#fffaf0,#fff0e6); padding:6px 10px; border-radius:999px; margin-right:8px; margin-top:8px; font-weight:700; box-shadow:0 8px 18px rgba(20,30,40,0.04); white-space:nowrap }
 .notes-row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:10px }
