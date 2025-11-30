@@ -73,7 +73,7 @@
 	{"number":62,"raga":"Rishabhapriya","type":"Melakarta","arohanam":"S R2 G3 M2 P D1 N2 S","avarohanam":"S N2 D1 P M2 G3 R2 S"},
 	{"number":63,"raga":"Latangi","type":"Melakarta","arohanam":"S R2 G3 M2 P D1 N3 S","avarohanam":"S N3 D1 P M2 G3 R2 S"},
 	{"number":64,"raga":"Vachaspati","type":"Melakarta","arohanam":"S R2 G3 M2 P D2 N2 S","avarohanam":"S N2 D2 P M2 G3 R2 S"},
-	{"number":65,"raga":"Kalyani","type":"Melakarta","arohanam":"S R2 G3 M2 P D2 N3 S","avarohanam":"S N3 D2 P M2 G3 R2 S"},
+	{"number":65,"raga":"Kalyani","type":"Melakarta","arohanam":"S R2 G3 M2 P D2 N3 S","avarohanam":"S N3 D2 P M2 G3 R2 S","songs":["Himadri suthe","Yaakundendu","ganapathe"]},
 	{"number":66,"raga":"Chitrambari","type":"Melakarta","arohanam":"S R2 G3 M2 P D3 N3 S","avarohanam":"S N3 D3 P M2 G3 R2 S"},
 
 	{"number":67,"raga":"Sucharitra","type":"Melakarta","arohanam":"S R3 G3 M2 P D1 N1 S","avarohanam":"S N1 D1 P M2 G3 R3 S"},

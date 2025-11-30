@@ -196,25 +196,6 @@ export default function RagaDetail() {
     };
   }, []);
 
-  // When the route's raga `name` changes (prev/next navigation), ensure any playing audio is stopped
-  // and reset so audio from the previous raga does not continue across navigation.
-  useEffect(() => {
-    if (audioRef.current) {
-      try {
-        audioRef.current.pause();
-        // reset playback position so if user returns it's at start
-        audioRef.current.currentTime = 0;
-      } catch (e) {
-        // ignore
-      }
-      audioRef.current = null;
-    }
-    setIsPlaying(false);
-    setCurrentTime(0);
-    setDuration(null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [name]);
-
   return (
     <div className="raga-detail">
       <div className="detail-header">
@@ -289,16 +270,7 @@ export default function RagaDetail() {
             )}
           </div>
 
-          <div className="detail-card">
-            <h3 className="card-heading">Popular Keerthanas</h3>
-            {meta ? (
-              <ol>
-                {(meta.keerthanas || []).map((k) => <li key={k}>{k}</li>)}
-              </ol>
-            ) : (
-              <p>-</p>
-            )}
-          </div>
+          {/* Popular Keerthanas removed per user request */}
 
           {/** Practice Tips removed per user request */}
         </div>

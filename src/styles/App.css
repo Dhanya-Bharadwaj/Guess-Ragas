@@ -208,17 +208,56 @@
 @keyframes cardIn{ to{ opacity:1; transform: translateY(0);} }
 
 .raga-detail{ padding:28px; max-width:1100px; margin:0 auto }
-.detail-header{ display:flex; align-items:center; gap:12px; margin-bottom:18px }
+.detail-header{ display:flex; align-items:flex-start; gap:12px; margin-bottom:18px }
 .back{ color:var(--muted); text-decoration:none }
 .detail-body{ display:flex; gap:18px; align-items:flex-start }
 .detail-left{ flex:2; display:flex; flex-direction:column; gap:16px }
 .detail-right{ flex:1; display:flex; flex-direction:column; gap:16px }
 .detail-card{ background:var(--card-bg); padding:18px; border-radius:12px; box-shadow: 0 10px 30px rgba(15,25,35,0.04) }
 
+/* ensure card headings align across left and right columns */
+.detail-left .detail-card, .detail-right .detail-card { margin-top: 0; }
+.detail-left .detail-card .card-heading, .detail-right .detail-card .card-heading { margin-top: 0; }
+
+/* Improve Popular Songs card in the right column */
+/* refined, professional Popular Songs card */
+.detail-right .detail-card {
+  /* match other cards (glass / soft white) so it blends with the page background */
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(15,25,35,0.04);
+}
+.detail-right .detail-card .card-heading{ font-size:16px; margin-bottom:10px; color: rgba(11,59,90,0.9) }
+.detail-right .detail-card ol{ counter-reset: songs; margin:0; padding:0; list-style:none }
+.detail-right .detail-card ol li{ counter-increment: songs; display:flex; gap:10px; align-items:center; margin:8px 0; padding-right:6px }
+.detail-right .detail-card ol li:before{ 
+  content: counter(songs);
+  width:20px; height:20px; border-radius:999px;
+  background: transparent;
+  color: rgba(11,59,90,0.85);
+  display:inline-grid; place-items:center; font-weight:800; font-size:12px; flex:0 0 20px;
+  border:1px solid rgba(11,59,90,0.08);
+}
+.detail-right .detail-card ol li{ font-weight:600; color:rgba(0,0,0,0.75); font-size:14px }
+
+/* Smaller screens: keep the popular-songs-mobile visible and styled similarly */
+.popular-songs-mobile{ display:none }
+@media (max-width:880px){
+  .popular-songs-mobile{ display:block }
+  .detail-right .detail-card{ display:none }
+}
+
+/* style mobile popular songs block to match aside card on small screens */
+.popular-songs-mobile.detail-card{ background: var(--card-bg); padding:16px; border-radius:12px; box-shadow: 0 8px 24px rgba(15,25,35,0.04); }
+.popular-songs-mobile.detail-card .card-heading{ font-size:16px; margin-bottom:8px }
+.popular-songs-mobile.detail-card ol{ margin:0; padding-left:18px }
+.popular-songs-mobile.detail-card ol li:before{ content: counter(songs); width:20px; height:20px; border-radius:999px; background: transparent; color: rgba(11,59,90,0.6); display:inline-grid; place-items:center; font-weight:600; font-size:12px; flex:0 0 20px; border:1px solid rgba(11,59,90,0.08) }
+
 /* Mobile-only duplicated block is hidden by default and revealed via media query */
 .popular-songs-mobile{ display:none }
 
-.title-block{ display:flex; flex-direction:column }
+.title-block{ display:flex; flex-direction:column; align-items:flex-start }
 .raga-title{ margin:0; font-size:26px; font-weight:800 }
 .meta-badges{ display:flex; gap:8px; margin-top:8px }
 .badge{ background:linear-gradient(90deg,#fff,#fff7e6); padding:6px 10px; border-radius:999px; font-weight:700; font-size:13px; color:#333; box-shadow:0 6px 18px rgba(120,120,150,0.06) }
