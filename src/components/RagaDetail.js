@@ -6,6 +6,14 @@ import curated from '../data/ragas';
 
 // Import locally added audio assets (bundler will emit URLs)
 import kalyani_swara from '../assets/ragas/kalyani_swara.mp3';
+import chalanata_swara from '../assets/ragas/chalanata_swara.mp3';
+import charukeshi_swara from '../assets/ragas/charukeshi_swara.mp3';
+import dharmavathi_swara from '../assets/ragas/dharmavathi_swara.mp3';
+import ganamoorthi_swara from '../assets/ragas/ganamoorthi_swara.mp3';
+import gowrimanohari_swara from '../assets/ragas/gowri manohari_swara.mp3';
+import harikambhoji_swara from '../assets/ragas/harikambhoji_swara.mp3';
+import hemavathi_swara from '../assets/ragas/hemavathi_swara.mp3';
+import kharaharapriya_swara from '../assets/ragas/kharaharapriya_swara.mp3';
 
 export default function RagaDetail() {
   const { id } = useParams();
@@ -66,7 +74,21 @@ export default function RagaDetail() {
 
   // Simple mapping for local audio files; keys are normalized raga names
   const AUDIO_MAP = {
+    // melakarta keys (normalized)
     kalyani: kalyani_swara,
+    chalanata: chalanata_swara,
+    charukesi: charukeshi_swara,
+    // accept common spelling variant
+    charukeshi: charukeshi_swara,
+    dharmavati: dharmavathi_swara,
+    dharmavathi: dharmavathi_swara,
+    ganamurti: ganamoorthi_swara,
+    ganamoorthi: ganamoorthi_swara,
+    gowrimanohari: gowrimanohari_swara,
+    harikambhoji: harikambhoji_swara,
+    hemavati: hemavathi_swara,
+    hemavathi: hemavathi_swara,
+    kharaharapriya: kharaharapriya_swara,
   };
 
   const ensureAudio = (src) => {
@@ -195,6 +217,17 @@ export default function RagaDetail() {
       }
     };
   }, []);
+
+  // Pause/reset audio when the route param (raga id) changes without unmounting
+  useEffect(() => {
+    if (!audioRef.current) return;
+    try { audioRef.current.pause(); } catch (e) {}
+    try { audioRef.current.currentTime = 0; } catch (e) {}
+    setIsPlaying(false);
+    setCurrentTime(0);
+    setDuration(null);
+    // keep the audioRef around; new ensureAudio will update src when needed
+  }, [id]);
 
   return (
     <div className="raga-detail">
