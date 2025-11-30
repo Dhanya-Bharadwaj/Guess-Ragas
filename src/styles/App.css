@@ -398,6 +398,33 @@
 @media (max-width:480px){
   /* allow header to wrap on very narrow screens so heading stays readable */
   .raga-section-header{ flex-wrap:wrap; gap:8px }
+
+/* Install banner - small, friendly prompt at bottom of the screen */
+.install-banner{
+  position:fixed;
+  left:50%;
+  bottom:18px;
+  transform:translateX(-50%);
+  z-index:60;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  background:var(--card-bg);
+  padding:12px 14px;
+  border-radius:12px;
+  box-shadow:0 12px 36px rgba(10,20,30,0.12);
+  border:1px solid rgba(10,20,30,0.04);
+  max-width:calc(100% - 36px);
+}
+.install-banner .install-msg{ font-weight:700; color:rgba(0,0,0,0.8); font-size:14px }
+.install-banner .install-actions{ display:flex; gap:8px; }
+.install-banner .install-add{ background:linear-gradient(90deg,var(--accent),#ff9a6a); border:none; padding:8px 12px; border-radius:8px; font-weight:800; cursor:pointer }
+.install-banner .install-close{ background:transparent; border:none; padding:8px 10px; border-radius:8px; cursor:pointer; color:rgba(0,0,0,0.6) }
+
+@media (max-width:520px){
+  .install-banner{ left:12px; right:12px; transform:none; }
+  .install-banner .install-msg{ font-size:13px }
+}
   .raga-search-inline input[type="search"]{ width:140px }
 }
 

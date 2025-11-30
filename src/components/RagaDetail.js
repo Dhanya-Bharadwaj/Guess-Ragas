@@ -4,16 +4,9 @@ import melakartaMeta from '../data/melakarta_meta.json';
 import janyaMeta from '../data/janya_meta.json';
 import curated from '../data/ragas';
 
-// Import locally added audio assets (bundler will emit URLs)
-import kalyani_swara from '../assets/ragas/kalyani_swara.mp3';
-import chalanata_swara from '../assets/ragas/chalanata_swara.mp3';
-import charukeshi_swara from '../assets/ragas/charukeshi_swara.mp3';
-import dharmavathi_swara from '../assets/ragas/dharmavathi_swara.mp3';
-import ganamoorthi_swara from '../assets/ragas/ganamoorthi_swara.mp3';
-import gowrimanohari_swara from '../assets/ragas/gowri manohari_swara.mp3';
-import harikambhoji_swara from '../assets/ragas/harikambhoji_swara.mp3';
-import hemavathi_swara from '../assets/ragas/hemavathi_swara.mp3';
-import kharaharapriya_swara from '../assets/ragas/kharaharapriya_swara.mp3';
+// Audio files are expected to be placed in `public/assets/ragas/` by the build step.
+// The `scripts/move_audio.js` script will copy files from `src/assets/ragas` into that folder
+// and emit `public/assets/ragas/manifest.json` which the service worker can precache.
 
 export default function RagaDetail() {
   const { id } = useParams();
@@ -75,20 +68,21 @@ export default function RagaDetail() {
   // Simple mapping for local audio files; keys are normalized raga names
   const AUDIO_MAP = {
     // melakarta keys (normalized)
-    kalyani: kalyani_swara,
-    chalanata: chalanata_swara,
-    charukesi: charukeshi_swara,
+    // map normalized names to public URLs (the copy script preserves original filenames)
+    kalyani: '/assets/ragas/kalyani_swara.mp3',
+    chalanata: '/assets/ragas/chalanata_swara.mp3',
+    charukesi: '/assets/ragas/charukeshi_swara.mp3',
     // accept common spelling variant
-    charukeshi: charukeshi_swara,
-    dharmavati: dharmavathi_swara,
-    dharmavathi: dharmavathi_swara,
-    ganamurti: ganamoorthi_swara,
-    ganamoorthi: ganamoorthi_swara,
-    gowrimanohari: gowrimanohari_swara,
-    harikambhoji: harikambhoji_swara,
-    hemavati: hemavathi_swara,
-    hemavathi: hemavathi_swara,
-    kharaharapriya: kharaharapriya_swara,
+    charukeshi: '/assets/ragas/charukeshi_swara.mp3',
+    dharmavati: '/assets/ragas/dharmavathi_swara.mp3',
+    dharmavathi: '/assets/ragas/dharmavathi_swara.mp3',
+    ganamurti: '/assets/ragas/ganamoorthi_swara.mp3',
+    ganamoorthi: '/assets/ragas/ganamoorthi_swara.mp3',
+    gowrimanohari: '/assets/ragas/gowri manohari_swara.mp3',
+    harikambhoji: '/assets/ragas/harikambhoji_swara.mp3',
+    hemavati: '/assets/ragas/hemavathi_swara.mp3',
+    hemavathi: '/assets/ragas/hemavathi_swara.mp3',
+    kharaharapriya: '/assets/ragas/kharaharapriya_swara.mp3',
   };
 
   const ensureAudio = (src) => {

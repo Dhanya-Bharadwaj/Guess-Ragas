@@ -29,6 +29,54 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Deploying to Netlify (CI)
+
+This repo includes a Netlify config and a GitHub Actions workflow that will automatically build and deploy the site to Netlify when you push to `main`.
+
+What you need to do in the repository settings:
+
+- Create two repository secrets (Settings → Secrets → Actions):
+	- `NETLIFY_AUTH_TOKEN` — a Personal Access Token from your Netlify account (User settings → Applications → Personal access tokens).
+	- `NETLIFY_SITE_ID` — the Site ID for your Netlify site (Site settings → Site information → copy "Site ID").
+
+Steps to enable automatic deploys:
+
+1. Create a site on Netlify (choose "Create a new site from Git" → GitHub → select this repository).
+2. In the site settings copy the Site ID and add it to your GitHub repo secrets as `NETLIFY_SITE_ID`.
+3. Generate a Netlify Personal Access Token and add it to your repo secrets as `NETLIFY_AUTH_TOKEN`.
+4. Push to `main` — GitHub Actions will run `npm ci` → `npm run build` and then deploy using the Netlify CLI.
+
+You can also deploy manually from your machine with the Netlify CLI:
+
+```powershell
+# install CLI (one-time)
+npm install -g netlify-cli
+
+# build
+npm run build
+
+# deploy (interactive for first-time, or use --prod to publish)
+netlify deploy --dir=build --prod
+```
+
+After the site is live, generate a QR code for the published HTTPS URL (see below).
+
+## Quick QR generation (PowerShell)
+
+Replace the `$url` value with your published site URL:
+
+```powershell
+$url = 'https://your-site.netlify.app'
+$qr = 'https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=' + [System.Web.HttpUtility]::UrlEncode($url)
+Start-Process $qr
+```
+
+## Notes about PWA & audio precaching
+
+- The build process copies audio files from `src/assets/ragas` into `public/assets/ragas` (via `scripts/move_audio.js`) before `npm run build` so they can be precached by the service worker.
+- The service worker will attempt to read `public/assets/ragas/manifest.json` during install and precache those audio files. If you add new audio files, they will be included automatically when you build.
+
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**

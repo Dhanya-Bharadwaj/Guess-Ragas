@@ -18,6 +18,9 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
+    "move-audio": "node scripts/move_audio.js",
+    "write-version": "node scripts/write_version.js",
+    "prebuild": "npm run move-audio && npm run write-version",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -10,12 +10,67 @@ function App() {
   const [showRagas, setShowRagas] = useState(false);
   const [file, setFile] = useState(null);
   const [audioURL, setAudioURL] = useState(null);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [showInstall, setShowInstall] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     return () => {
       if (audioURL) URL.revokeObjectURL(audioURL);
     };
   }, [audioURL]);
+
+  useEffect(() => {
+    // Check if already installed (standalone display-mode) or iOS standalone
+    try {
+      const standalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+      const iOS = window.navigator && window.navigator.standalone;
+      if (standalone || iOS) setIsInstalled(true);
+    } catch (e) {}
+
+    function beforeInstallPrompt(e) {
+      // Prevent the automatic prompt
+      e.preventDefault();
+      // save the event for later triggering
+      setDeferredPrompt(e);
+      // show our custom install UI unless already installed
+      setShowInstall(true);
+    }
+
+    function onAppInstalled() {
+      setIsInstalled(true);
+      setShowInstall(false);
+      setDeferredPrompt(null);
+    }
+
+    window.addEventListener('beforeinstallprompt', beforeInstallPrompt);
+    window.addEventListener('appinstalled', onAppInstalled);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', beforeInstallPrompt);
+      window.removeEventListener('appinstalled', onAppInstalled);
+    };
+  }, []);
+
+  const handleInstall = async () => {
+    if (!deferredPrompt) {
+      // iOS or unsupported — show basic hint
+      setShowInstall(false);
+      return;
+    }
+    try {
+      deferredPrompt.prompt();
+      const choice = await deferredPrompt.userChoice;
+      // userChoice.outcome is 'accepted' or 'dismissed'
+      if (choice && choice.outcome === 'accepted') {
+        setIsInstalled(true);
+      }
+    } catch (e) {
+      // ignore
+    }
+    setShowInstall(false);
+    setDeferredPrompt(null);
+  };
 
   function handleFileChange(e) {
     const f = e.target.files && e.target.files[0];
@@ -96,6 +151,16 @@ function App() {
           <Route path="/raga/:id" element={<RagaDetail />} />
           <Route path="/tanpura" element={<Tanpura />} />
         </Routes>
+        {/* Install prompt banner shown when browser fires beforeinstallprompt */}
+        {showInstall && !isInstalled && (
+          <div className="install-banner" role="dialog" aria-live="polite">
+            <div className="install-msg">Add Raga Detector to your Home screen for quick access.</div>
+            <div className="install-actions">
+              <button className="install-add" onClick={handleInstall}>Add to Home Screen</button>
+              <button className="install-close" onClick={() => setShowInstall(false)}>Close</button>
+            </div>
+          </div>
+        )}
       </div>
     </BrowserRouter>
   );
