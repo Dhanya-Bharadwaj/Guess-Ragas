@@ -23,7 +23,7 @@
 	{"number":19,"raga":"Jhankaradhvani","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N1 S","avarohanam":"S N1 D1 P M1 G2 R2 S"},
 	{"number":20,"raga":"Natabhairavi","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N2 S","avarohanam":"S N2 D1 P M1 G2 R2 S"},
 	{"number":21,"raga":"Kiravani","type":"Melakarta","arohanam":"S R2 G2 M1 P D1 N3 S","avarohanam":"S N3 D1 P M1 G2 R2 S"},
-	{"number":22,"raga":"Kharaharapriya","type":"Melakarta","arohanam":"S R2 G2 M1 P D2 N2 S","avarohanam":"S N2 D2 P M1 G2 R2 S"},
+	{"number":22,"raga":"Kharaharapriya","type":"Melakarta","arohanam":"S R2 G2 M1 P D2 N2 S","avarohanam":"S N2 D2 P M1 G2 R2 S","songs":["Shades of Kharaharapriya","sentil andavan","kurinji malar"]},
 	{"number":23,"raga":"Gowrimanohari","type":"Melakarta","arohanam":"S R2 G2 M1 P D2 N3 S","avarohanam":"S N3 D2 P M1 G2 R2 S"},
 	{"number":24,"raga":"Varunapriya","type":"Melakarta","arohanam":"S R2 G2 M1 P D3 N3 S","avarohanam":"S N3 D3 P M1 G2 R2 S"},
 
