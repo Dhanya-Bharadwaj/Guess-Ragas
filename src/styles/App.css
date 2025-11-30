@@ -251,8 +251,13 @@
 /* style mobile popular songs block to match aside card on small screens */
 .popular-songs-mobile.detail-card{ background: var(--card-bg); padding:16px; border-radius:12px; box-shadow: 0 8px 24px rgba(15,25,35,0.04); }
 .popular-songs-mobile.detail-card .card-heading{ font-size:16px; margin-bottom:8px }
-.popular-songs-mobile.detail-card ol{ margin:0; padding-left:18px }
-.popular-songs-mobile.detail-card ol li:before{ content: counter(songs); width:20px; height:20px; border-radius:999px; background: transparent; color: rgba(11,59,90,0.6); display:inline-grid; place-items:center; font-weight:600; font-size:12px; flex:0 0 20px; border:1px solid rgba(11,59,90,0.08) }
+.popular-songs-mobile.detail-card ol{ margin:0; padding:0; list-style:none; counter-reset: songs; }
+.popular-songs-mobile.detail-card ol li{ counter-increment: songs; display:flex; gap:10px; align-items:center; margin:8px 0; padding-right:6px }
+.popular-songs-mobile.detail-card ol li:before{ 
+  content: counter(songs);
+  width:20px; height:20px; border-radius:999px; 
+  background: transparent; color: rgba(11,59,90,0.6); display:inline-grid; place-items:center; font-weight:600; font-size:12px; flex:0 0 20px; border:1px solid rgba(11,59,90,0.08);
+}
 
 /* Mobile-only duplicated block is hidden by default and revealed via media query */
 /* (duplicate removed so mobile Popular Songs block can appear) */
