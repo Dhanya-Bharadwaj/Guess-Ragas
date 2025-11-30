@@ -255,7 +255,7 @@
 .popular-songs-mobile.detail-card ol li:before{ content: counter(songs); width:20px; height:20px; border-radius:999px; background: transparent; color: rgba(11,59,90,0.6); display:inline-grid; place-items:center; font-weight:600; font-size:12px; flex:0 0 20px; border:1px solid rgba(11,59,90,0.08) }
 
 /* Mobile-only duplicated block is hidden by default and revealed via media query */
-.popular-songs-mobile{ display:none }
+/* (duplicate removed so mobile Popular Songs block can appear) */
 
 .title-block{ display:flex; flex-direction:column; align-items:flex-start }
 .raga-title{ margin:0; font-size:26px; font-weight:800 }
@@ -267,7 +267,7 @@
 .notation{ }
 .notation-box{ background:linear-gradient(180deg, #ffffff, #fbfbfd); padding:14px; border-radius:10px; box-shadow:0 12px 30px rgba(12,20,30,0.06); border:1px solid rgba(20,30,40,0.02) }
 .notation-row{ display:flex; gap:12px; align-items:center; margin:10px 0; flex-wrap:wrap }
-.notation-text{ background:rgba(250,248,244,0.9); padding:10px 12px; border-radius:8px; flex:1; word-break:normal; overflow-wrap:break-word }
+.notation-text{ background:rgba(250,248,244,0.9); padding:10px 12px; border-radius:8px; flex:1; min-width:0; word-break:normal; overflow-wrap:break-word }
 .notation-text.mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Segoe UI Mono', monospace; font-weight:700 }
 .notation .start-note{ margin-left:8px; font-weight:700 }
 .notation-actions{ display:flex; gap:8px; margin-top:14px; align-items:center }
@@ -438,6 +438,8 @@
   .meta-badges{ flex-wrap:wrap; gap:8px }
   .notation-row{ flex-direction:column; align-items:flex-start }
   .notation-text{ width:100% }
+  /* prevent breaking notation across lines on small screens; allow horizontal scroll */
+  .notation-text.mono{ white-space:nowrap; overflow-x:auto }
   .detail-card{ padding:14px }
 
   /* Show mobile popular-songs block and hide the aside version on small screens */
@@ -446,12 +448,11 @@
 }
 
 @media (max-width:420px){
-  /* Use a 2-column grid on very small phones so content can sit side-by-side */
-  .detail-body{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:start }
+  /* Stack columns on very small phones, show mobile popular-songs block */
+  .detail-body{ flex-direction:column; gap:12px }
   .detail-left{ width:100% }
-  .detail-right{ display:block }
-  /* Hide the duplicated mobile popular songs block when aside is visible */
-  .popular-songs-mobile{ display:none }
+  .detail-right{ display:none }
+  .popular-songs-mobile{ display:block }
 
   .raga-detail{ padding:12px }
   .raga-title{ font-size:20px }
