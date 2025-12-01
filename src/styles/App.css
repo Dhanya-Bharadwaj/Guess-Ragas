@@ -155,7 +155,7 @@
 .learn-header{ text-align:center; margin-bottom:18px }
 .learn-header .lead{ color:rgba(0,0,0,0.6); margin-top:6px }
 .raga-section{ margin-top:20px }
-.raga-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin-top:12px }
+.raga-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 260px)); gap:12px; margin-top:12px; justify-content:center; justify-items:center }
 .raga-card{
   position:relative;
   display:flex;
@@ -170,8 +170,10 @@
   transition: box-shadow .12s ease, transform .18s ease;
   word-break: normal;
   overflow: hidden;
-  min-height:64px;
-  max-height:96px;
+  min-height:56px;
+  max-height:84px;
+  width:100%;
+  max-width:360px;
   text-align:center;
 }
 .raga-card:hover{ box-shadow:0 12px 36px rgba(12,20,30,0.12) }
@@ -248,6 +250,18 @@
   .detail-right .detail-card{ display:none }
 }
 
+/* Force two-column layout on most phones for denser display */
+@media (max-width:520px){
+  .raga-grid{ grid-template-columns: repeat(2, 1fr); gap:10px }
+  .raga-card{ padding:10px 12px; min-height:52px }
+  .raga-name{ font-size:14px }
+}
+
+@media (min-width:521px) and (max-width:760px){
+  /* mid-size phones / small tablets */
+  .raga-grid{ grid-template-columns: repeat(3, 1fr); gap:12px }
+}
+
 /* style mobile popular songs block to match aside card on small screens */
 .popular-songs-mobile.detail-card{ background: var(--card-bg); padding:16px; border-radius:12px; box-shadow: 0 8px 24px rgba(15,25,35,0.04); }
 .popular-songs-mobile.detail-card .card-heading{ font-size:16px; margin-bottom:8px }
@@ -269,7 +283,7 @@
 .badge.muted{ background:transparent; color:rgba(0,0,0,0.6); border:1px solid rgba(0,0,0,0.06); box-shadow:none }
 .badge.type{ background:linear-gradient(90deg,#e9f7ff,#f4fbff); color:#0b3b5a }
 
-.notation{ }
+.notation { display:block; }
 .notation-box{ background:linear-gradient(180deg, #ffffff, #fbfbfd); padding:14px; border-radius:10px; box-shadow:0 12px 30px rgba(12,20,30,0.06); border:1px solid rgba(20,30,40,0.02) }
 .notation-row{ display:flex; gap:12px; align-items:center; margin:10px 0; flex-wrap:wrap }
 .notation-text{ background:rgba(250,248,244,0.9); padding:10px 12px; border-radius:8px; flex:1; min-width:0; word-break:normal; overflow-wrap:break-word }
